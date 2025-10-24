@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="src/logo-humatch.png">
+    <title>Humatch - Connexion</title>
+    <style>
+        :root {
+            --primary: #00daab;
+            --primary-dark: #1d4ed8;
+            --error: #ef4444;
+            --success: #10b981;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar h1 {font-family: 'Causten Black'; font-size: 4vh; margin: 0;}
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            gap: 1vh;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark);
+            img{height: 4vh;}
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-family: 'Causten Black';
+            font-size: 1.2rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            color: var(--dark);
+            border: 1px solid var(--dark);
+        }
+
+        .auth-container {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 7%;
+            align-items: center;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            background-color: #f8fafc;
+            border: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            background-color: white;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .form-container {
+            padding: 2rem;
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        .form-input.error {
+            border-color: var(--error);
+        }
+
+        .error-message {
+            color: var(--error);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: var(--gray);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 0.375rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--dark);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 1rem;
+            color: var(--gray);
+        }
+
+        .login-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 1.5rem 0;
+            color: var(--gray);
+            position: relative;
+        }
+
+        .divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #e2e8f0;
+            z-index: 1;
+        }
+
+        .divider span {
+            background-color: white;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #d1d5db;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover {
+            background-color: #f1f5f9;
+        }
+
+        .google {
+            color: #db4437;
+        }
+
+        .linkedin {
+            color: #0077b5;
+        }
+
+        .facebook {
+            color: #1877f2;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .auth-container {
+                border-radius: 0;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                border-bottom: none;
+                border-right: 1px solid #e2e8f0;
+            }
+
+            .tab:last-child {
+                border-right: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo" style="vertical-align: middle;">
+        <img src="src/logo-humatch.png">
+        <h1>Humatch</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#">Offres d'emploi</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="auth-buttons">
+        <button class="btn btn-outline" onclick="window.location.href='inscription.html'">Inscription</button>        
+        <button class="btn btn-primary" onclick="window.location.href='connexion.html'">Connexion</button>
+    </div>
+</nav>
+
+    <div class="auth-container">
+
+        <div id="login" class="form-container">
+            <h2 class="form-title">Connectez-vous !</h2>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label class="form-label" for="login-email">Email</label>
+                    <input type="email" id="login-email" class="form-input" placeholder="votre@email.com" required>
+                    <div class="error-message" id="login-email-error">Veuillez entrer un email valide</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="login-password">Mot de passe</label>
+                    <div class="password-container">
+                        <input type="password" id="login-password" class="form-input" placeholder="••••••••" required>
+                    </div>
+                    <div class="error-message" id="login-password-error">Mot de passe requis</div>
+                </div>
+
+                <div class="form-group">
+                    <a href="#" style="font-size: 0.875rem; color: var(--primary); text-decoration: none;">Mot de passe oublié ?</a>
+                </div>
+
+                <button type="submit" class="btn-submit">Se connecter</button>
+            </form>
+
+    </div>
+</body>
+</html>

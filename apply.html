@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humatch - Trouvez votre emploi idéal</title>
+    <link rel="icon" type="image/x-icon" href="src/logo-humatch.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo" style="vertical-align: middle;">
+        <img src="src/logo-humatch.png">
+        <h1>Humatch</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#">Offres d'emploi</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="auth-buttons">
+        <button class="btn btn-outline" onclick="window.location.href='inscription.html'">Inscription</button>        
+        <button class="btn btn-primary" onclick="window.location.href='connexion.html'">Connexion</button>
+    </div>
+</nav>
+<style>
+    .candidature-container{display: flex; flex-direction: column; justify-content: center; margin: 5vh; background-color: white; border-radius: 20px; padding: 2%; align-items: center; width: 80%; margin-left: auto; margin-right: auto;}
+    
+    h2{font-family: 'Causten Black'; font-size: 6vh; color: var(--primary);}
+    .company-name{font-family: 'Causten Regular'; color: var(--gray); margin: 0vh;}
+    p{font-family: 'Causten Regular'; font-size: 2vh;}
+    .contract{font-family: 'Causten Bold'; padding: 0.2vh 0.5vh 0.2vh 0.5vh; background-color: var(--gray); width: fit-content; border-radius: 0.5vh; text-align: center; color: rgb(37, 37, 37);}
+    label{font-family: 'Causten Bold';}
+    input{background-color: rgb(236, 236, 236); border-radius: 1vh; height: 4vh; border: none; width: 80%;}
+    select{border: none; font-family: 'Causten Regular'; border-radius: 2vh; background-color: rgb(236, 236, 236); height: 4vh;}
+    textarea{border-radius: 1vh; width: 80%; height: 10rem; background-color: rgb(236, 236, 236); border: none;}
+    .cv_import{background-color: none;}
+
+</style>
+<div class="candidature-container">
+        <div class="job-offer-preview">
+            <div class="offer-header">
+                <h2>Job name</h2>
+                <p class="company-name">Company name</span><br>
+                <p class="location">Paris, France</p>
+                <p class="contract">CDI</p>
+            </div><br>
+            <HR width="60%"><br>
+            <div class="offer-description">
+                <h3>Description du poste</h3>
+                <p>Nous recherchons un développeur Full-Stack passionné pour rejoindre notre équipe dynamique. Vous travaillerez sur des projets innovants avec les dernières technologies (React, Node.js, MongoDB).</p>
+            </div>
+            <br><HR width="60%"><br>
+            <form class="apply-form">
+                <h3>Remplissez les champs suivants pour postuler</h3><br>
+
+                <label for="first_name">First Name :</label><br>
+                <input type="text" id="last_name" name="fname"><br><br>
+                <label for="lname">Last Name : </label><br>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="email">Email :</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="phone">Phone :</label><br>
+                <input type="tel" id="phone" name="phone"><br><br>
+                <label for="cv_import" class="cv_import">Ajouter un CV</label><br>
+                <input type="file" id="cv_import" name="cv_import" class="cv_import"><br><br>
+                <label for="experience">Experience :</label><br>
+                <select>
+                    <option value="0-1 an">0-1 an</option>
+                    <option value="1-2 ans">1-2 ans</option>
+                    <option value="2-3 ans">2-3 ans</option>
+                    <option value="3+">3 ans et +</option>
+                </select><br><br>                
+                <label for="motivation_area">Pourquoi rejoindre notre entreprise ?</label><br>
+                <textarea name="motivation"></textarea><br><br>
+                <input type="submit" value="Postuler" class="apply-btn"> 
+            </form>
+        </div>
+</div>            
+
+
+    <footer class="footer">
+        <p>&copy; 2025 Humatch. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

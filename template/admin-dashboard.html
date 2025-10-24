@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - JobBoard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/admin-dashboard.css">
+</head>
+<body>
+    <!-- Barre latérale -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>Job<span>Board</span></h2>
+            <p>Admin Panel</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> Utilisateurs</a></li>
+            <li><a href="#"><i class="fas fa-briefcase"></i> Offres d'emploi</a></li>
+            <li><a href="#"><i class="fas fa-chart-bar"></i> Statistiques</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Paramètres</a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Tableau de bord administrateur</h1>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span>Admin</span>
+            </div>
+        </div>
+
+        <!-- Cartes de statistiques -->
+        <div class="stats-cards">
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>120</h3>
+                <p>Utilisateurs totaux</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-briefcase"></i>
+                <h3>45</h3>
+                <p>Offres actives</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-paper-plane"></i>
+                <h3>200</h3>
+                <p>Candidatures ce mois</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>3</h3>
+                <p>Offres signalées</p>
+            </div>
+        </div>
+
+        <!-- Graphique (simulé) -->
+        <div class="section">
+            <h2><i class="fas fa-chart-line"></i> Activité récente</h2>
+            <div class="chart-placeholder">
+                <img src="https://via.placeholder.com/600x300?text=Graphique+des+offres+par+mois" alt="Graphique">
+            </div>
+        </div>
+
+        <!-- Liste des utilisateurs à valider -->
+        <div class="section">
+            <h2><i class="fas fa-user-clock"></i> Nouveaux utilisateurs (à valider)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Rôle</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jean Dupont</td>
+                        <td>jean.dupont@example.com</td>
+                        <td><span class="role candidate">Candidat</span></td>
+                        <td>15/05/2024</td>
+                        <td>
+                            <button class="btn-validate"><i class="fas fa-check"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TechCorp</td>
+                        <td>contact@techcorp.com</td>
+                        <td><span class="role company">Entreprise</span></td>
+                        <td>14/05/2024</td>
+                        <td>
+                            <button class="btn-validate"><i class="fas fa-check"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Liste des offres signalées -->
+        <div class="section">
+            <h2><i class="fas fa-exclamation-triangle"></i> Offres signalées</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Entreprise</th>
+                        <th>Raison</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Développeur Full Stack (Urgent !)</td>
+                        <td>QuickHire</td>
+                        <td>Titre trompeur</td>
+                        <td>
+                            <button class="btn-view">Voir</button>
+                            <button class="btn-delete">Supprimer</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

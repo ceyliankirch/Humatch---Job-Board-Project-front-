@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humatch - Trouvez votre emploi idéal</title>
+    <link rel="icon" type="image/x-icon" href="src/logo-humatch.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo" style="vertical-align: middle;">
+        <img src="src/logo-humatch.png">
+        <h1>Humatch</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#">Offres d'emploi</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="auth-buttons">
+        <button class="btn btn-outline" onclick="window.location.href='inscription.html'">Inscription</button>        
+        <button class="btn btn-primary" onclick="window.location.href='connexion.html'">Connexion</button>
+    </div>
+</nav>
+    <style>
+        .top-banner {
+            background-color: rgb(219, 255, 248);
+            height: 300px;
+        }
+        .company-logo {
+            height: 5rem;
+            border: 5px slid white;
+            border-radius: 10px;
+            position: relative;
+        }
+        .main-infos {
+            border-radius: 10px;
+            margin: 2rem 2rem 0rem 2rem;
+            display: flex;
+            gap: 2rem;
+            position: relative;
+        }
+        .offer-header {
+            background-color: white;
+            display: flex;
+            gap: 2rem;
+            border-radius: 1rem;
+            padding: 20px;
+            width: 80%;
+            h1{font-family: 'Causten Black'; font-size: 3rem; margin: 0px; margin-top: 0.5rem;}
+            p{font-family: 'Causten Regular'; color: var(--gray); font-size: 1.5rem; margin: 0px; position: relative; bottom: 12px;}        }
+        .side-infos {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            h2{font-family: 'Causten Bold'; font-size: 1.2rem;}
+        }
+
+        .recap-options {
+            display: flex;
+            gap: 0.5rem;
+            p{
+                background-color: rgb(171, 255, 237);
+                border-radius: 0.3rem;
+                padding: 0.2rem 1rem 0.2rem 1rem;
+                font-family: 'Causten Bold';
+                border: none;
+            }
+        }
+
+        .skills-options {
+            display: flex;
+            gap: 1rem;
+            p{
+                background-color: rgb(171, 255, 237);
+                border-radius: 0.3rem;
+                padding: 0.2rem 1rem 0.2rem 1rem;
+                font-family: 'Causten Bold';
+                border: none;
+
+            }
+        }
+
+        .offer-description {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 0rem 2rem 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            p{
+                font-family: 'Causten Regular';
+                font-size: 1.2rem;
+            }
+            h2{
+                font-family: 'Causten Black';
+                font-size: 2.5rem;
+            }
+            
+        }
+
+        .offer-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            bottom: 8rem;
+        }
+        @media (max-width: 768px) {
+            .offer-header{width: 100%;}
+            .main-infos{flex-direction: column;}
+            .skills-options{
+                flex-direction: column;
+                p{width: fit-content; margin-left: auto; margin-right: auto;}
+                gap: 0.6vh;
+            }
+            .recap-options{
+                flex-direction: column;
+                p{width: fit-content; margin-left: auto; margin-right: auto;}
+                gap: 0.6vh;
+            }
+            .side-infos{text-align: center;}
+        }
+    </style>
+    <section class="offer-page">
+        <div class="top-banner"></div>
+        <div class="offer-cards">
+            <div class="main-infos">
+                <div class="offer-header">
+                    <img src="src/logo-humatch.png" id="company-logo" class="company-logo">            
+                    <div class="Title-and-company">
+                        <h1>Job Title</h1>
+                        <p>Company name</p>
+                        <button class="apply-btn" onclick="window.location.href='apply.html'">Postuler</button>
+                    </div> 
+                </div>
+                    <div class="side-infos">
+                        <div class="offer-recap">
+                            <h2>Résumé de l'offre</h2>
+                            <div class="recap-options">
+                                <p class="contract-type">CDI</p>
+                                <p class="time">Présentiel</p>
+                                <p class="rythm">35h/semaine</p>
+                            </div>
+                        </div>  
+                        <div class="required-skills">
+                            <h2>Compétences requises</h2>
+                            <div class="skills-options">
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>Javascript</p>
+                                <p>Python</p>
+                            </div>
+                        </div>
+                    </div>     
+            </div>
+            <div class="offer-description">
+                <h2>Description de l'offre</h2>
+                <HR SIZE="10"; color="black" width="5%">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus neque non tristique tincidunt. Donec diam nunc, vehicula nec euismod dictum, maximus quis ipsum. Mauris vitae hendrerit mi, id congue nibh. Nullam egestas erat eu mi congue, a elementum orci vulputate. Curabitur efficitur vehicula dui vitae sodales. Donec mi tellus, sagittis vel suscipit at, lobortis nec nibh. Praesent venenatis convallis nulla eu suscipit. Sed ac diam at ligula scelerisque sodales sit amet quis eros.
+                    Curabitur commodo justo in urna venenatis semper. Ut vel enim vel metus facilisis faucibus ut sit amet justo. Aenean lobortis lacus vitae elit tempus, vitae sollicitudin nulla euismod. Praesent id justo vulputate, volutpat risus ut, congue nunc. Duis sed lorem sollicitudin, pharetra lectus ac, pellentesque eros. Ut tempus feugiat metus eget viverra. Nam nisi mauris, faucibus et luctus quis, efficitur ut massa. Maecenas vulputate purus placerat commodo condimentum. Curabitur eget magna ac justo scelerisque convallis. Proin at turpis tempor, blandit felis eget, elementum purus. Ut mi metus, cursus in mi non, ullamcorper lobortis quam. Etiam consequat justo molestie rhoncus lobortis. Nullam a ex non velit finibus pharetra at a justo. Nullam auctor, turpis ac porta accumsan, neque diam condimentum nisl, sit amet viverra elit eros in augue. Curabitur euismod magna nec hendrerit finibus.
+                    Mauris condimentum sit amet sem non pellentesque. Nullam ullamcorper vel turpis eget porttitor. Vestibulum vel pellentesque erat. Nulla egestas cursus eros vel ullamcorper. Curabitur at mi feugiat, vestibulum massa at, posuere velit. Integer placerat malesuada nisi id hendrerit. Cras facilisis et mauris sit amet efficitur. Etiam ac justo ac orci consequat porttitor. Phasellus at molestie sapien, eu vehicula nisi. Mauris vulputate turpis ligula, in consequat ipsum fermentum ut. Aenean et sodales libero, vitae pretium nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Sed in tincidunt ex. Nunc ultricies nibh id magna pulvinar, eget semper massa fringilla. Fusce ultrices nibh sollicitudin urna suscipit, nec aliquet ex tristique. Aenean pellentesque volutpat tortor ac lobortis. Fusce sodales eleifend sem vel dignissim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi id bibendum elit. Duis condimentum sem in ex tristique, sit amet pretium dui dapibus. Ut lobortis at lectus et iaculis. Ut mollis nunc id metus luctus ullamcorper. Quisque ultrices fringilla aliquam.
+                    Duis tristique vestibulum posuere. Pellentesque gravida mi vitae ullamcorper vehicula. Etiam vehicula ullamcorper mauris, eget ullamcorper velit auctor vel. Donec dictum odio nec urna pretium placerat. Vestibulum dolor risus, mattis ac scelerisque id, euismod quis mauris. Sed sed arcu quis lorem condimentum scelerisque sed dictum augue. Donec aliquet risus a consectetur elementum. In blandit efficitur quam aliquet egestas. In id consequat nulla. Duis vulputate eros at ante finibus hendrerit. Nam fermentum dolor at tortor cursus sollicitudin. Nullam molestie sagittis risus iaculis malesuada.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Humatch. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Font Awesome pour les icônes -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

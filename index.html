@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humatch - Trouvez votre emploi idéal</title>
+    <link rel="icon" type="image/x-icon" href="src/logo-humatch.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo" style="vertical-align: middle;">
+        <img src="src/logo-humatch.png">
+        <h1>Humatch</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#">Offres d'emploi</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="auth-buttons">
+        <button class="btn btn-outline" onclick="window.location.href='inscription.html'">Inscription</button>        
+        <button class="btn btn-primary" onclick="window.location.href='connexion.html'">Connexion</button>
+    </div>
+</nav>
+
+    <!-- Hero Section avec barre de recherche -->
+    <section class="hero">
+        <h1>Trouvez l'emploi qui vous correspond</h1>
+        <p>Des milliers d'offres d'emploi disponibles partout en France</p>
+
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Métier, mot-clé ou entreprise">
+
+            <select class="search-select">
+                <option value="">Catégorie</option>
+                <option value="informatique">Informatique</option>
+                <option value="marketing">Marketing</option>
+                <option value="sante">Santé</option>
+                <option value="commerce">Commerce</option>
+                <option value="btp">BTP</option>
+            </select>
+
+            <select class="search-select">
+                <option value="">Type de contrat</option>
+                <option value="cdi">CDI</option>
+                <option value="cdd">CDD</option>
+                <option value="alternance">Alternance</option>
+                <option value="stage">Stage</option>
+                <option value="interim">Intérim</option>
+            </select>
+
+            <select class="search-select">
+                <option value="">Distance</option>
+                <option value="10">10 km</option>
+                <option value="25">25 km</option>
+                <option value="50">50 km</option>
+                <option value="100">100 km</option>
+                <option value="tele">Télétravail</option>
+            </select>
+
+            <button class="search-btn">Rechercher</button>
+        </div>
+    </section>
+
+    <!-- Section Offres d'emploi -->
+    <section class="jobs-section">
+        <h2 class="section-title">Offres d'emploi récentes</h2>
+
+        <div class="jobs-grid">
+            <!-- Offre 1 -->
+            <div class="job-card">
+                <h3 class="job-title"><!-- Développeur Full Stack (React/Node.js) --> </h3>
+                <p class="job-company">TechSolutions • Paris</p>
+                <div class="job-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Paris 15ème (75)</span>
+                </div>
+                <div class="job-tags">
+                    <span class="tag">CDI</span>
+                    <span class="tag">Télétravail partiel</span>
+                    <span class="tag">35h/semaine</span>
+                </div>
+                <div class="job-footer">
+                    <span class="job-salary">38k€ - 45k€/an</span>
+                    <div class="job-actions">
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                        <button class="apply-btn" onclick="window.location.href='offer.html'">En Savoir +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offre 2 -->
+            <div class="job-card">
+                <h3 class="job-title">Chef de projet Marketing Digital</h3>
+                <p class="job-company">DigitalBoost • Lyon</p>
+                <div class="job-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Lyon 3ème (69)</span>
+                </div>
+                <div class="job-tags">
+                    <span class="tag">CDD (6 mois)</span>
+                    <span class="tag">Présentiel</span>
+                </div>
+                <div class="job-footer">
+                    <span class="job-salary">28k€ - 32k€/an</span>
+                    <div class="job-actions">
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                        <button class="apply-btn" onclick="window.location.href='offer.html'">En Savoir +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offre 3 -->
+            <div class="job-card">
+                <h3 class="job-title">Infirmier/Infirmière (H/F)</h3>
+                <p class="job-company">Clinique Saint-Louis • Marseille</p>
+                <div class="job-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Marseille 8ème (13)</span>
+                </div>
+                <div class="job-tags">
+                    <span class="tag">CDI</span>
+                    <span class="tag">Temps plein</span>
+                    <span class="tag">Nuit possible</span>
+                </div>
+                <div class="job-footer">
+                    <span class="job-salary">2 500€ - 3 000€/mois</span>
+                    <div class="job-actions">
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                        <button class="apply-btn" onclick="window.location.href='offer.html'">En Savoir +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offre 4 -->
+            <div class="job-card">
+                <h3 class="job-title">Commercial B2B (Secteur Tech)</h3>
+                <p class="job-company">InnoTech • Bordeaux</p>
+                <div class="job-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Bordeaux Centre (33)</span>
+                </div>
+                <div class="job-tags">
+                    <span class="tag">CDI</span>
+                    <span class="tag">Télétravail 2j/semaine</span>
+                    <span class="tag">Commission</span>
+                </div>
+                <div class="job-footer">
+                    <span class="job-salary">30k€ - 50k€/an</span>
+                    <div class="job-actions">
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                        <button class="apply-btn" onclick="window.location.href='offer.html'">En Savoir +</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Humatch. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Font Awesome pour les icônes -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
